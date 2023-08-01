@@ -1,12 +1,12 @@
 import React from "react";
+import UserList from "./components/UserList";
 
-
-const App:React.FC =() =>{
+const App: React.FC = () => {
   return (
-    <div className="bg-red-600">
-      App
+    <div className="container mx-auto">
+      <UserList />
     </div>
   );
-}
+};
 
 export default App;
