@@ -6,3 +6,9 @@ export const store = configureStore({
     users: usersReducer,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export * from "./thunks/fetchUsers";
+export * from "./thunks/createUser";

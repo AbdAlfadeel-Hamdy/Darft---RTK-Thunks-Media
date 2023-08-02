@@ -3,13 +3,13 @@ import className from "classnames";
 
 interface ButtonProps {
   children: React.ReactNode;
-  primary: boolean;
-  secondary: boolean;
-  success: boolean;
-  warning: boolean;
-  outline: boolean;
-  danger: boolean;
-  rounded: boolean;
+  primary?: boolean;
+  secondary?: boolean;
+  success?: boolean;
+  warning?: boolean;
+  outline?: boolean;
+  danger?: boolean;
+  rounded?: boolean;
   [key: string]: any;
 }
 
