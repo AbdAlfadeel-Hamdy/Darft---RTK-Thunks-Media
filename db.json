@@ -1,32 +1,12 @@
 {
   "users": [
     {
-      "name": "Lloyd",
+      "name": "Naomi",
       "id": 1
     },
     {
-      "name": "Sydni",
-      "id": 2
-    },
-    {
-      "name": "Alicia",
+      "name": "Dejuan",
       "id": 3
-    },
-    {
-      "name": "Stevie",
-      "id": 4
-    },
-    {
-      "name": "Arnulfo",
-      "id": 5
-    },
-    {
-      "name": "Myrtie",
-      "id": 6
-    },
-    {
-      "name": "Nicola",
-      "id": 7
     }
   ],
   "albums": [],

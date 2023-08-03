@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { usersReducer } from "./slices/usersSlice";
+import { usersReducer, User } from "./slices/usersSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,3 +12,5 @@ export type AppDispatch = typeof store.dispatch;
 
 export * from "./thunks/fetchUsers";
 export * from "./thunks/createUser";
+export * from "./thunks/removeUser";
+export type { User };

@@ -6,7 +6,7 @@ export const fetchUsers = createAsyncThunk("users/fetch", async () => {
   const response = await axios.get("/users", {
     baseURL: BASE_URL,
   });
-  await pause(3000);
+  await pause(1000);
   return response.data;
 });
 

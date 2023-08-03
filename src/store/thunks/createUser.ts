@@ -15,6 +15,6 @@ export const createUser = createAsyncThunk("users/create", async () => {
     }
   );
 
-  await pause(3000);
+  await pause(1000);
   return response.data;
 });

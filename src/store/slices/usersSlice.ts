@@ -1,17 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchUsers } from "../thunks/fetchUsers";
 import { createUser } from "../thunks/createUser";
+import { removeUser } from "../thunks/removeUser";
+
+export interface User {
+  id: number;
+  name: string;
+}
 
 interface usersState {
-  // isLoading: boolean;
-  data: { id: number; name: string }[];
-  // error: { [keys: string]: any } | null;
+  isLoading: boolean;
+  data: User[];
+  error: { [keys: string]: any } | null;
 }
 
 const initialState: usersState = {
-  // isLoading: false,
+  isLoading: false,
   data: [],
-  // error: null,
+  error: null,
 };
 
 const usersSlice = createSlice({
@@ -40,6 +46,17 @@ const usersSlice = createSlice({
     // builder.addCase(createUser.rejected, (state, action) => {
     //   state.isLoading = false;
     //   state.error = action.error;
+    // });
+    // builder.addCase(removeUser.pending, (state, action) => {
+    //   state.isLoading = true;
+    // });
+    builder.addCase(removeUser.fulfilled, (state, action) => {
+      // state.isLoading = false;
+      state.data = state.data.filter((user) => user.id !== action.payload.id);
+    });
+    // builder.addCase(removeUser.rejected, (state, action) => {
+    //   state.isLoading = false;
+    //   state.error = action.error
     // });
   },
 });

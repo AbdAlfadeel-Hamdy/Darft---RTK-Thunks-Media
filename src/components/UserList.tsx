@@ -4,6 +4,7 @@ import { RootState, createUser, fetchUsers } from "../store";
 import Skeleton from "./ui/Skeleton";
 import Button from "./ui/Button";
 import useThunk from "../hooks/use-thunk";
+import UserListItem from "./UserListItem";
 
 export const UserList: React.FC = () => {
   const {
@@ -28,30 +29,25 @@ export const UserList: React.FC = () => {
     doFetchUsers();
   }, [doFetchUsers]);
 
-  if (isLoadingUsers) return <Skeleton times={5} className="h-10 w-20" />;
+  let content: React.ReactNode;
 
-  if (loadingUsersError) return <p>Cannot fetch user!</p>;
-
-  const rendredUsers = data.map((user) => {
-    return (
-      <div key={user.id} className="mb-2 border rounded">
-        <div className="flex p-2 justify-between items-center cursor-pointer">
-          {user.name}
-        </div>
-      </div>
-    );
-  });
+  if (isLoadingUsers) {
+    content = <Skeleton times={5} className="h-10 w-full" />;
+  } else if (loadingUsersError) {
+    content = <p>Cannot fetch user!</p>;
+  } else
+    content = data.map((user) => <UserListItem key={user.id} user={user} />);
 
   return (
     <div>
-      <div className="flex justify-between m-3">
+      <div className="flex justify-between items-center m-3">
         <h1 className="m-2 text-xl">Users</h1>
         <Button loading={isCreatingUser} onClick={createUserHandler}>
           + Create User
         </Button>
         {creatingUserError && "Error creating user!"}
       </div>
-      {rendredUsers}
+      {content}
     </div>
   );
 };
