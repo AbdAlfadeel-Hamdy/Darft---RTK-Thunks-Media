@@ -1,56 +1,32 @@
 {
   "users": [
     {
-      "name": "Brisa",
+      "name": "Lloyd",
       "id": 1
     },
     {
-      "name": "Ignacio",
+      "name": "Sydni",
       "id": 2
     },
     {
-      "name": "Stephany",
+      "name": "Alicia",
       "id": 3
     },
     {
-      "name": "Corine",
+      "name": "Stevie",
       "id": 4
     },
     {
-      "name": "Johnathon",
+      "name": "Arnulfo",
       "id": 5
     },
     {
-      "name": "Malachi",
+      "name": "Myrtie",
       "id": 6
     },
     {
-      "name": "Amber",
+      "name": "Nicola",
       "id": 7
-    },
-    {
-      "name": "Otilia",
-      "id": 8
-    },
-    {
-      "name": "Miller",
-      "id": 9
-    },
-    {
-      "name": "Haleigh",
-      "id": 10
-    },
-    {
-      "name": "Serenity",
-      "id": 11
-    },
-    {
-      "name": "Cleve",
-      "id": 12
-    },
-    {
-      "name": "Baby",
-      "id": 13
     }
   ],
   "albums": [],
