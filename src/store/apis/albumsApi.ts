@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { User } from "../slices/usersSlice";
 import { faker } from "@faker-js/faker";
+import { BASE_URL } from "../../utils/constants";
 
 export interface Album {
   id: number;
@@ -11,7 +12,7 @@ export interface Album {
 export const albumsApi = createApi({
   reducerPath: "albums",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3005",
+    baseUrl: BASE_URL,
   }),
   tagTypes: ["Album", "UserAlbum"],
   endpoints(builder) {

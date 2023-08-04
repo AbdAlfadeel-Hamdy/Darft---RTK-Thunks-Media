@@ -1,35 +1,171 @@
 {
   "users": [
     {
-      "name": "Retha",
+      "name": "Elenora",
       "id": 1
     },
     {
-      "name": "Taylor",
-      "id": 3
+      "name": "Oleta",
+      "id": 2
     }
   ],
   "albums": [
     {
-      "title": "Rock",
+      "title": "Hip Hop",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "Pop",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "title": "Funk",
       "userId": 1,
       "id": 3
     },
     {
-      "title": "Blues",
-      "userId": 1,
+      "title": "Classical",
+      "userId": 2,
+      "id": 4
+    }
+  ],
+  "photos": [
+    {
+      "url": "https://loremflickr.com/640/480?lock=6605318106644480",
+      "albumId": 3,
+      "id": 1
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=8535052178685952",
+      "albumId": 3,
+      "id": 4
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=1592644658528256",
+      "albumId": 3,
+      "id": 5
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=2951129291816960",
+      "albumId": 3,
+      "id": 6
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=1007159401775104",
+      "albumId": 3,
+      "id": 7
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=1964859128283136",
+      "albumId": 3,
       "id": 8
     },
     {
-      "title": "Folk",
-      "userId": 1,
+      "url": "https://loremflickr.com/640/480?lock=2733469704650752",
+      "albumId": 3,
       "id": 9
     },
     {
-      "title": "Pop",
-      "userId": 3,
+      "url": "https://picsum.photos/seed/OeZjn/640/480",
+      "albumId": 3,
       "id": 10
+    },
+    {
+      "url": "https://picsum.photos/seed/sL1Ihj/640/480",
+      "albumId": 3,
+      "id": 11
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=3056392321630208",
+      "albumId": 3,
+      "id": 12
+    },
+    {
+      "url": "https://picsum.photos/seed/fbTncK/640/480",
+      "albumId": 3,
+      "id": 13
+    },
+    {
+      "url": "https://picsum.photos/seed/C6oMTea/640/480",
+      "albumId": 3,
+      "id": 14
+    },
+    {
+      "url": "https://picsum.photos/seed/QSiSr/640/480",
+      "albumId": 3,
+      "id": 15
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=4529597945217024",
+      "albumId": 3,
+      "id": 16
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=7284018651332608",
+      "albumId": 3,
+      "id": 17
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=4126933830860800",
+      "albumId": 3,
+      "id": 18
+    },
+    {
+      "url": "https://picsum.photos/seed/NSGTjOzo7/640/480",
+      "albumId": 3,
+      "id": 19
+    },
+    {
+      "url": "https://picsum.photos/seed/1AAENsEv/640/480",
+      "albumId": 3,
+      "id": 20
+    },
+    {
+      "url": "https://picsum.photos/seed/JnESd0LdFU/640/480",
+      "albumId": 3,
+      "id": 21
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=4718506318757888",
+      "albumId": 3,
+      "id": 22
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=844496925360128",
+      "albumId": 3,
+      "id": 23
+    },
+    {
+      "url": "https://picsum.photos/seed/IYAEHZJ1/640/480",
+      "albumId": 3,
+      "id": 25
+    },
+    {
+      "url": "https://picsum.photos/seed/3MfZ0/640/480",
+      "albumId": 3,
+      "id": 26
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=3393257073541120",
+      "albumId": 1,
+      "id": 27
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=7512952070471680",
+      "albumId": 1,
+      "id": 28
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=2919453025107968",
+      "albumId": 1,
+      "id": 29
+    },
+    {
+      "url": "https://loremflickr.com/640/480?lock=4008467079626752",
+      "albumId": 4,
+      "id": 30
     }
-  ],
-  "photos": []
+  ]
 }
