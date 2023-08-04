@@ -3,7 +3,7 @@ import { useState } from "react";
 
 interface ExpandablePanelProps {
   header: JSX.Element;
-  children: JSX.Element;
+  children: JSX.Element | string;
 }
 
 const ExpandablePanel: React.FC<ExpandablePanelProps> = ({
@@ -16,8 +16,8 @@ const ExpandablePanel: React.FC<ExpandablePanelProps> = ({
     setExpanded((prevState) => !prevState);
   };
   return (
-    <div>
-      <div className="flex items-center justify-between p-2 ">
+    <div className="mb-2 border rounded">
+      <div className="flex items-center justify-between p-2">
         {header}
         <div className="cursor-pointer" onClick={expandPanelHandler}>
           {expanded ? <GoChevronDown /> : <GoChevronLeft />}

@@ -26,15 +26,13 @@ const UserListItem: React.FC<UserListItemProps> = ({ user }) => {
         <GoTrash />
       </Button>
       {loadingError && <p>Error deleting user!</p>}
-      {user.name}
+      <h2 className="text-lg font-bold">{user.name}</h2>
     </div>
   );
   return (
-    <div className="mb-2 border rounded">
-      <ExpandablePanel header={header}>
-        <AlbumList user={user} />
-      </ExpandablePanel>
-    </div>
+    <ExpandablePanel header={header}>
+      <AlbumList user={user} />
+    </ExpandablePanel>
   );
 };
 
