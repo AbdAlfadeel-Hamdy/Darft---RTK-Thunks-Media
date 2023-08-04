@@ -13,13 +13,14 @@ export const albumsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005",
   }),
-  tagTypes: ["Album"],
+  tagTypes: ["Album", "UserAlbum"],
   endpoints(builder) {
     return {
       // FETCH ALBUMS
       fetchAlbums: builder.query({
         providesTags: (results, error, user: User) => [
-          { type: "Album", id: user.id },
+          ...results.map((album: Album) => ({ type: "Album", id: album.id })),
+          { type: "UserAlbum", id: user.id },
         ],
         query: (user: User) => ({
           method: "GET",
@@ -32,7 +33,7 @@ export const albumsApi = createApi({
       // CREATE ALBUM
       createAlbum: builder.mutation({
         invalidatesTags: (results, error, user: User) => [
-          { type: "Album", id: user.id },
+          { type: "UserAlbum", id: user.id },
         ],
         query: (user: User) => ({
           method: "POST",
@@ -46,7 +47,7 @@ export const albumsApi = createApi({
       // REMOVE ALBUM
       removeAlbum: builder.mutation({
         invalidatesTags: (results, error, album) => [
-          { type: "Album", id: album.userId },
+          { type: "Album", id: album.id },
         ],
         query: (album: Album) => ({
           method: "DELETE",

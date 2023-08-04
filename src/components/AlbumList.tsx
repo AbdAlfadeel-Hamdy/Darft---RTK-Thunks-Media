@@ -13,7 +13,7 @@ interface AlbumListProps {
 }
 
 const AlbumList: React.FC<AlbumListProps> = ({ user }) => {
-  const { isLoading, data, error } = useFetchAlbumsQuery(user);
+  const { isFetching, data, error } = useFetchAlbumsQuery(user);
   const [createAlbum, createAlbumResults] = useCreateAlbumMutation();
 
   const createAlbumHandler = () => {
@@ -21,7 +21,7 @@ const AlbumList: React.FC<AlbumListProps> = ({ user }) => {
   };
 
   let content: JSX.Element;
-  if (isLoading) content = <Skeleton times={3} className="h-8 w-full" />;
+  if (isFetching) content = <Skeleton times={3} className="h-8 w-full" />;
   else if (error) content = <div>"Error loading albums!"</div>;
   else
     content = data.map((album: Album) => (
